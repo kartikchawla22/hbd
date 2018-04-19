@@ -1,0 +1,32 @@
+
+.scrollable { height: 500px; border-color: transparent; position: relative }
+.scrollable > div {min-height: 500px; width: 75%; margin: 0 auto;}
+.scrollable > div:nth-of-type(even) { background-color: rgb(73, 50, 177)}
+.scrollable > div:nth-of-type(odd) { background-color: rgb(192, 0, 77)}
+
+
+.scrollable.section {overflow:auto;}
+.red-herring{
+  overflow-x: hidden;  
+}
+.navbar {
+  margin-bottom: 50px; 
+  text-align: center;
+}
+.navbar-inverse{
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: rgba(44, 83, 211, 0.5);
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+  color: rgba(1, 151, 126, 1);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #00356B;
+}
