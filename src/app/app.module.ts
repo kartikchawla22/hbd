@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { Ng2ScrollableModule } from 'ng2-scrollable';
 import { ParticlesModule } from 'angular-particle';
-import {ConstantsService  } from '../app/constants.service'
+import { ConstantsService } from '../app/constants.service'
 
 @NgModule({
   declarations: [

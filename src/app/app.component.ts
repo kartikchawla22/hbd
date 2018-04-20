@@ -1,5 +1,5 @@
-import { Component, AfterViewInit,  ElementRef } from '@angular/core';
-import { scrollTo  } from 'ng2-utils';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { scrollTo } from 'ng2-utils';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { ConstantsService } from './constants.service'
 
@@ -9,11 +9,11 @@ import { ConstantsService } from './constants.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  constructor(public elementRef :ElementRef, private constant: ConstantsService ){}
+  constructor(public elementRef: ElementRef, private constant: ConstantsService) { }
   title = 'app works!';
-  id = 's1'; hid = 'h1'; wid='w1';
-  myStyle : Object = {};
-  myParams : Object = {};
+  id = 's1'; hid = 'h1'; wid = 'w1';
+  myStyle: Object = {};
+  myParams: Object = {};
   scrollTo(selector, parentSelector, horizontal) {
     scrollTo(
       selector,       // scroll to this
@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       0              // distance from top or left
     );
   }
-  ngOnInit(){
+  ngOnInit() {
     this.myStyle = {
       position: 'absolute',
       width: '100%',
@@ -30,7 +30,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     }
     this.myParams = this.constant.particles;
   }
-  ngAfterViewInit(){
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgba(37, 194, 210, 0.81)';
- }
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgba(107, 248, 225)';
+  }
 }

@@ -1,24 +1,104 @@
-<particles [style]="myStyle"  [params]="myParams"></particles>
-<nav class="navbar navbar-inverse">
+<div style="overflow-x : hidden;">
+  <particles [style]="myStyle" [params]="myParams"></particles>
+
+
+
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" [class.current]="id == 's'+ 1 " (click)="scrollTo('#s'+1, '#v-scrollable')">HBD</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a [class.current]="id == 's'+ 1 " (click)="scrollTo('#s'+1, '#v-scrollable')">Home</a>
+          </li>
+          <li>
+            <a [class.current]="id == 's'+ 2 " (click)="scrollTo('#s'+2, '#v-scrollable')">Page 1</a>
+          </li>
+          <li>
+            <a [class.current]="id == 's'+ 3 " (click)="scrollTo('#s'+3, '#v-scrollable')">Page 2</a>
+          </li>
+          <li>
+            <a [class.current]="id == 's'+ 4 " (click)="scrollTo('#s'+4, '#v-scrollable')">Page 3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- <nav class="navbar navbar-inverse">
     <div class="navbar-header">
       <a class="navbar-brand" [class.current]="id == 's'+ 1 " (click)="scrollTo('#s'+1, '#v-scrollable')">HBD</a>
-      <!-- <a class="navbar-brand" href="#">HBD</a> -->
     </div>
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav navbar-right">
       <li><a [class.current]="id == 's'+ 1 " (click)="scrollTo('#s'+1, '#v-scrollable')">Home</a></li>
       <li><a [class.current]="id == 's'+ 2 "(click)="scrollTo('#s'+2, '#v-scrollable')">Page 1</a></li>
       <li><a [class.current]="id == 's'+ 3 "(click)="scrollTo('#s'+3, '#v-scrollable')">Page 2</a></li>
       <li><a [class.current]="id == 's'+ 4 "(click)="scrollTo('#s'+4, '#v-scrollable')">Page 3</a></li>
     </ul>
-</nav>
+</nav> -->
 
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="red-herring">
+        <div id="v-scrollable" class="scrollable section" ng2-scrollable (elementVisible)="id = $event.id">
+          <div id="s1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.</div>
+          <div id="s2">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="../assets/images/image1.jpg" alt="image1">
+                </div>
 
-  <div class="red-herring">
-      <div id="v-scrollable" class="scrollable section"
-      ng2-scrollable (elementVisible)="id = $event.id" style="margin-right: -15px;position: relative;"  >
-      <div id="s1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-      <div id="s2">Section 2  (scroll to here)</div>
-      <div id="s3">Section 3  (scroll to here)</div>
-      <div id="s4">Section 4  (scroll to here)</div>
+                <div class="item">
+                  <img src="../assets/images/image2.jpeg" alt="image2">
+                </div>
+              </div>
+
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div id="s3">Section 3 (scroll to here)</div>
+          <div id="s4">Section 4 (scroll to here)</div>
+        </div>
+      </div>
     </div>
+    <div class="col-sm-2"></div>
   </div>
+</div>
